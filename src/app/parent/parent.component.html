@@ -1,0 +1,9 @@
+<h1>Parent Component</h1>
+<br><br>
+<button mat-button color="accent" (click)="inviaAChild()">Invia denaro al Child Component</button>
+<br><br><br><br>
+<div *ngIf="testoGrazie == 'Grazie'">
+    <h2>Il Child Component dice : {{ testoGrazie }}</h2>
+</div>
+
+<app-child [euroCount]="euro" (grazie)="ringraziaParent($event)"></app-child>

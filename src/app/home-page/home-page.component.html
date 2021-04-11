@@ -1,0 +1,25 @@
+<div fxLayout="row" style="width: 100%">
+    <div class="primo">
+        {{ sharedService.string1 }}<br><br>
+         <!-- per cambiare il valore, passo il valore del ngModel all'interno del metodo tramite CLICK-->
+        <input type="text" [(ngModel)]="input1"><br><br>
+        <!-- per cambiare il valore, passo il valore del ngModel all'interno del metodo SEMPLICEMENTE LIVE-->
+        <input type="text" [(ngModel)]="this.sharedService.string1"><br><br>
+        <button mat-button mat-raised-button color="primary" (click)="aggiornaValore(input1)">Aggiorna valore</button>
+    </div>
+    <div class="secondo">
+        {{ sharedService.string2 }}<br><br>
+        <input type="text" [(ngModel)]="input2"><br><br>
+        <button mat-button mat-raised-button color="primary" (click)="aggiornaValore(input2)">Aggiorna valore 2</button>
+    </div>
+    <div class="terzo">
+        {{ sharedService.string3 }}<br><br>
+        <input type="text" [(ngModel)]="input3"><br><br>
+        <button mat-button mat-raised-button color="primary" (click)="aggiornaValore(input3)">Aggiorna valore 3</button>
+    </div>
+</div>
+
+<mat-divider></mat-divider>
+
+
+

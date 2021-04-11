@@ -1,0 +1,38 @@
+<h1 style="margin-left: 30%">Reactive form</h1>
+
+<div style="margin-left: 30%">
+    <h4>1.formsControl</h4>
+
+    <input type="text" [formControl]="nome">
+    <input type="number" [formControl]="eta">
+    <input type="test" [formControl]="paese">
+        <br>
+        <!-- creo i messaggi di errore con una condizione -->
+    <span *ngIf="nome.invalid">
+        <p style="color: red">Il nome può contenere max 10 caratteri</p>
+    </span>
+    <br>
+    <button (click)="setName()">Imposta valore</button>
+    <br>
+    <button (click)="setResetName()">Resetta valore</button>
+</div>
+
+<br><br><br><br>
+
+<div style="margin-left: 30%;">
+    <h4>2.formsControlName</h4> 
+
+    <form [formGroup]="utenteForm" (ngSubmit)="onFormSubmit()"> <!-- passo il form creato nel ts  e tramite il (ngSubmit) il click della form -->
+        Nome: <input formControlName="nome">
+        Cognome: <input formControlName="cognome">
+        Età: <input formControlName="citta">
+        Paese: <input formControlName="paese">
+        <br>
+        <div *ngIf="utenteForm.get('nome').invalid">
+            <p style="color: red">Il nome può contenere max 10 caratteri</p>
+        </div>
+        <button type="submit">Invia</button>
+    </form>
+</div>
+
+

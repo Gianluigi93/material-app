@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .example-spacer{
+    flex: 1 1 auto;
+  }
+
+  a{
+    text-decoration: none
+  }
+
+  a:hover{
+    color: red;
+  }
+
+  /* distanzio i bottoni */
+  .mat-icon-button {
+    margin: 0 50px
+  }
+
+  /* flex div */
+  .primo,.secondo,.terzo{
+    width: 33.33%
+  }
+  .primo{
+    background-color: green;
+    margin-left: 5%;
+    padding: 10px;
+  }
+  .secondo{
+    background-color: white;
+    padding: 10px;
+  }
+  .terzo{
+    background-color: red;
+    margin-right: 5%;
+    padding: 10px;
+  }
+
+  /* centro le card */
+  .mat-card {
+    margin: 0 auto;
+}
+
+
